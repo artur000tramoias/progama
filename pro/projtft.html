@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>OTTO</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .cor {
+            color: white;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .cabe {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .imagem1 {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .descricao-site {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rodape-simples {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        .imagem-projeto {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra preta com menu -->
+    <div class="cor cabe">
+        <img class="imagem1" src="ima/logoda.png" alt="Logo">
+        <div class="cor" onclick="inicial()">Inicial</div>
+        <div class="cor" onclick="projetos()">Projetos</div>
+        <div class="cor" onclick="sobre()">Sobre</div>
+        <div class="cor" onclick="contatos()">Contatos</div>
+    </div>
+
+    <!-- Título OTTO logo abaixo da barra preta -->
+    <h1 style="text-align: center; margin-top: 20px;">OTTO</h1>
+
+    <!-- Descrição -->
+    <div class="descricao-site">
+        O site tem como principal objetivo servir como uma vitrine digital 
+        para a exibição de projetos desenvolvidos em formato de software. A proposta é criar uma plataforma 
+        acessível, organizada e visualmente atrativa, onde desenvolvedores, estudantes, empresas ou instituições 
+        possam apresentar suas criações tecnológicas de forma prática e profissional.
+    </div>
+
+    <!-- Título da seção de projetos -->
+    <h2 style="text-align: center;">Projetos</h2>
+
+    <!-- Imagem clicável abaixo de "Projetos" -->
+    <div>
+        <a href="raa.html" target="_blank">
+            <img class="imagem-projeto" src="wew.png" alt="Imagem dos projetos">
+        </a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape-simples">
+        Número de celular: 55(83)98888888
+    </footer>
+
+    <!-- Navegação com JavaScript -->
+    <script>
+        function inicial() {
+            window.location.href = "inicial.html";
+        }
+
+        function projetos() {
+            window.location.href = "projeto.html";
+        }
+
+        function sobre() {
+            window.location.href = "sobre.html";
+        }
+
+        function contatos() {
+            window.location.href = "contatos.html";
+        }
+    </script>
+
+</body>
+</html>
