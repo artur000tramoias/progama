@@ -1,4 +1,4 @@
-# 🌱 Progama – Plataforma de Tecnologias com Impacto Socioecológico
+# 🌱 Softwares – Plataforma de Tecnologias com Impacto Socioecológico
 
 Este projeto tem como objetivo centralizar, mapear e divulgar **softwares e plataformas tecnológicas** que ajudam empresas, ONGs e iniciativas com atuação **socioecológica**. A ideia é promover o acesso a ferramentas que facilitem práticas sustentáveis, gestão ambiental, educação ecológica, entre outros temas relacionados à ecologia e responsabilidade socioambiental.
 
