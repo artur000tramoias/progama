@@ -7,100 +7,207 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            padding-bottom: 60px;
+            background-color: #f9f9f9;
         }
 
         .cor {
             color: white;
             cursor: pointer;
-            margin: 0 10px;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .cor:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         .cabe {
-            background-color: black;
+            background-color: rgb(49, 255, 60);
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 20px;
+            padding: 15px 30px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .imagem1 {
             width: 100px;
             height: auto;
-            margin-right: 20px;
+        }
+
+        .menu {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .descricao-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 30px auto;
+            gap: 40px;
+            padding: 20px;
         }
 
         .descricao-site {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            flex: 1;
+            line-height: 1.8;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+
+        .imagem-descricao {
+            width: 350px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .imagem-descricao:hover {
+            transform: scale(1.03);
+            border-color: rgb(92, 221, 124);
         }
 
         .rodape-simples {
-            background-color: black;
+            background-color: rgb(3, 143, 61);
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             position: fixed;
             bottom: 0;
-            left: 0;
             width: 100%;
-            font-size: 0.9em;
+        }
+
+        .container-imagens {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         .imagem-projeto {
-            display: block;
-            margin: 20px auto;
-            max-width: 90%;
-            height: auto;
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .imagem-projeto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-color: rgb(92, 221, 124);
+        }
+
+        .projeto-link {
+            text-decoration: none;
+            text-align: center;
+            color: #333;
+        }
+
+        .projeto-titulo {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .titulo-principal {
+            text-align: center;
+            margin: 40px 0;
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin: 50px 0 30px;
+            color: #2c3e50;
+            font-size: 2em;
+        }
+
+        @media (max-width: 768px) {
+            .descricao-container {
+                flex-direction: column;
+            }
+            
+            .imagem-descricao {
+                width: 100%;
+                max-width: 350px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Barra preta com menu -->
-    <div class="cor cabe">
-        <img class="imagem1" src="ima/logoda.png" alt="Logo">
-        <div class="cor" onclick="inicial()">Inicial</div>
-        <div class="cor" onclick="projetos()">Projetos</div>
-        <div class="cor" onclick="sobre()">Sobre</div>
-        <div class="cor" onclick="contatos()">Contatos</div>
+    <!-- Barra de navegação -->
+    <div class="cabe">
+        <img class="imagem1" src="logoda.png" alt="Lo">
+        <div class="menu">
+            <div class="cor" onclick="inicial()">Inicial</div>
+            <div class="cor" onclick="projetos()">Projetos</div>
+            <div class="cor" onclick="sobre()">Sobre</div>
+            <div class="cor" onclick="contatos()">Contatos</div>
+        </div>
     </div>
 
-    <!-- Título OTTO logo abaixo da barra preta -->
-    <h1 style="text-align: center; margin-top: 20px;">OTTO</h1>
+    <!-- Título principal -->
+    <h1 class="titulo-principal">OTTO</h1>
 
-    <!-- Descrição -->
-    <div class="descricao-site">
-        O site tem como principal objetivo servir como uma vitrine digital 
-        para a exibição de projetos desenvolvidos em formato de software. A proposta é criar uma plataforma 
-        acessível, organizada e visualmente atrativa, onde desenvolvedores, estudantes, empresas ou instituições 
-        possam apresentar suas criações tecnológicas de forma prática e profissional.
+    <!-- Descrição com imagem lado a lado -->
+    <div class="descricao-container">
+        <img class="imagem-descricao" src="ChatGPT Image Jun 8, 2025, 12_12_53 PM.png" alt="Instalação de painéis solares">
+        
+        <div class="descricao-site">
+            O site tem como principal objetivo servir como uma vitrine digital 
+            para a exibição de projetos desenvolvidos em formato de software. A proposta é criar uma plataforma 
+            acessível, organizada e visualmente atrativa, onde desenvolvedores, estudantes, empresas ou instituições 
+            possam apresentar suas criações tecnológicas de forma prática e profissional.
+        </div>
     </div>
 
-    <!-- Título da seção de projetos -->
-    <h2 style="text-align: center;">Projetos</h2>
+    <!-- Seção de projetos -->
+    <h2 class="titulo-secao">Projetos</h2>
 
-    <!-- Imagem clicável abaixo de "Projetos" -->
-    <div>
-        <a href="raa.html" target="_blank">
-            <img class="imagem-projeto" src="wew.png" alt="Imagem dos projetos">
+    <!-- Container para projetos -->
+    <div class="container-imagens">
+        <a href="asdsdsdd.mp4" class="projeto-link" target="_blank">
+            <img class="imagem-projeto" src="wew.png" alt="Demonstração do Projeto">
+            <div class="projeto-titulo">Fotovolt</div>
+        </a>
+        
+        <a href="#" class="projeto-link" target="_blank">
+            <img class="imagem-projeto" src="Untitled-1.png" alt="Detalhes do Projeto">
+            <div class="projeto-titulo">Banco de dados</div>
         </a>
     </div>
 
     <!-- Rodapé -->
     <footer class="rodape-simples">
-        Número de celular: 55(83)98888888
+        Contato: (83) 98888-8888 | Email: contato@otto.com.br
     </footer>
 
-    <!-- Navegação com JavaScript -->
     <script>
         function inicial() {
-            window.location.href = "inicial.html";
+            window.location.href = "index.html";
         }
 
         function projetos() {
-            window.location.href = "projeto.html";
+            window.location.href = "#";
         }
 
         function sobre() {
@@ -111,6 +218,5 @@
             window.location.href = "contatos.html";
         }
     </script>
-
 </body>
 </html>
